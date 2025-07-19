@@ -1,7 +1,99 @@
+/* general */
 *{
     font-family: 'Roboto';
 }
 
 #navbar img{
-    width: 50px;
+    width: 60px;
+}
+
+#navbar {
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 0;
+}
+
+#navbar a {
+    font-size: 14px;
+    color: #757575;
+}
+
+#navbar a:hover {
+    font-size: 14px;
+    color: #f2a340;
+}
+
+#search-container {
+    background-image: url("../img/goingmarry1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1 {
+    color: #f2a340;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* Container centralizado */
+#events-container {
+    max-width: 1200px;
+    margin: 0 auto;           /* Centraliza o container */
+    padding: 20px;            /* Espaço interno nas laterais */
+}
+
+/* Cards */
+#cards-conteiners {
+    display: flex;
+    flex-wrap: wrap;          /* Permite quebra de linha automaticamente */
+    justify-content: center;  /* Centraliza os cards na linha */
+    gap: 20px;                /* Espaçamento entre os cards */
+}
+
+/* Estilo dos cards */
+#cards-conteiners .card {
+    width: 250px;             /* Largura fixa para uniformidade */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cards-conteiners .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Imagens no card */
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+#events-container h2,
+#events-container p {
+    text-align: center;
 }

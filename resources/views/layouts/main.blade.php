@@ -25,14 +25,14 @@
             <nav class="navbar navbar-expand-lg navbar-ligth">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
-                        <img src="/img/thumb-1920-1329624.svg" alt="logo">
+                        <img src="/img/asprasvg.svg" alt="logo">
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-link">
                             <a href="/">Inicio</a>
                         </li>
                         <li class="nav-link">
-                            <a href="/cadastro/novoCadastro">Inserir Cadastro</a>
+                            <a href="/events/create">Inserir Evento</a>
                         </li>
                         <li class="nav-link">
                             <a href="/">Entrar</a>

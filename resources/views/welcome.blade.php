@@ -4,47 +4,36 @@
 @section('content')
     
 
+{{-- $event(tabela do model) --> (titulo da coluna) --}}
+
+    <div id="search-container" class="col-md-12">
+        <h1>Busque um evento</h1>
+        <form action="">
+            <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">
+        </form>
+    </div>
+
     
+    <div id="events-container" class="col-md-12">
+        <h2 class="subtitle">Proximos eventos</h2>
+        <p>Veja os eventos dos proximos dias</p>
+        <div id="cards-conteiners" class="row">
+            @foreach ($events as $event)
 
+            <div class="card" style="width: 20%;">
+                <img src="/img/Momon.png" class="card-img-top" alt="{{$event->title}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{$event->title}}</h5>
+                    <p class="card-text">{{$event -> description}}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
 
-        <h1>Hello mundo</h1>
+            @endforeach
+        </div>
+    </div>
 
-        <img width="500px" src="/img/1264528.png" alt="Banner">
-
-        @if(10 > 5)
-            <p>a condição é true</p>
-        @endif
-
-            <p> {{ $nome }} </p>
-
-
-        @if($nome == 'pedro')
-            <p>O nome é pedro</p>
-        @elseif($nome == 'Matheus')
-                <p>O nome é {{$nome}} e ele tem {{$idade}} anos e trabalha como {{$profissao}}</p>
-        @else
-            <p>O nome não é pedro</p>
-        @endif
-
-        
-        @for($i = 0; $i < count($arr); $i++)
-            <p>{{$arr[$i]}} - {{$i}}</p>
-            @if($i == 2)
-                <p>O i é 2</p>
-            @endif
-        @endfor
-
-        @php
-            $name = "joao";
-            echo $name;
-        @endphp
-
-        @foreach ($nomes as $nomes)
-            <p>{{$loop->index}}</p>
-            <p>{{$nomes}}</p>
-        @endforeach
-
-
+    
         <!-- Comentario HTML -->
 
         {{-- Comentario em blade --}}
