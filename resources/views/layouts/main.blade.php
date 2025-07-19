@@ -48,7 +48,7 @@
         @yield('content')
 
         <footer>
-            <p>Projeto1 &copy; 2025</p>
+            <p>RN &copy; 2025</p>
         </footer>
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

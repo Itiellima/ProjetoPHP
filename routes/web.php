@@ -12,9 +12,9 @@ Route::get('/cadastro/novoCadastro', [CadastroController::class, 'criarCadastro'
 
 Route::get('/', [EventController::class, 'index']);
 
-route::get('/events/create', [EventController::class, 'create']);
+Route::get('/events/create', [EventController::class, 'create']);
 
-
+Route::post('/events', [EventController::class, 'store']);
 
 
 
