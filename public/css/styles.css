@@ -1,4 +1,6 @@
 /* general */
+
+
 *{
     font-family: 'Roboto';
 }
@@ -53,6 +55,16 @@ body {
 header {
     background-color: #fff;
     border-bottom: 1px solid #ccc;
+}
+
+.msg {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
 }
 
 
@@ -123,3 +135,5 @@ footer p{
 #event-create-container label{
     font-weight: bold;
 }
+
+
