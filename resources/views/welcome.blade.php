@@ -19,17 +19,26 @@
         <p>Veja os eventos dos proximos dias</p>
         <div id="cards-conteiners" class="row">
             @foreach ($events as $event)
-
             <div class="card" style="width: 20%;">
-                <img src="/img/Momon.png" class="card-img-top" alt="{{$event->title}}">
+            
+                @if (!empty($event->image))
+                    <img src="{{asset('img/events/' . $event->image) }}" class="card-img-top" alt="{{$event->title}}">
+                @else
+                    <img src="/img/Momom.png" class="card-img-top" alt="{{$event->title}}">
+                @endif
+                
                 <div class="card-body">
+                    <p class="card-date"> {{ date('d/m/Y', strtotime($event->date)) }}</p>
                     <h5 class="card-title">{{$event->title}}</h5>
-                    <p class="card-text">{{$event -> description}}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <p class="card-text">x participantes</p>
+                    <a href="/events/{{ $event->id }}" class="btn btn-primary">Saber Mais</a>
                 </div>
             </div>
 
             @endforeach
+            @if (count($events) == 0)
+                <p>Nao há eventos disponiveis</p>
+            @endif
         </div>
     </div>
 
