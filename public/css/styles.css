@@ -183,3 +183,7 @@ footer p{
 #items-list li{
     display: flex;
 }
+
+.dashboard-events-container form{
+    display: inline-block;
+}
