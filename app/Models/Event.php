@@ -17,6 +17,12 @@ class Event extends Model
         return $this.belongTo('App\Models\User');
     }
 
+    public function users(){
+        return $this->belongsToMany('App\Models\User');
+    }
+
+
+
     protected $guarded = [];
 
 }
