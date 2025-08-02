@@ -28,6 +28,8 @@ Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('aut
 
 Route::post('/events/join/{id}', [EventController::class, 'joinEvent'])->middleware('auth');
 
+Route::delete('/events/leave/{id}', [EventController::class, 'leaveEvent'])->middleware('auth');
+
 
 //rota sem utilizar o controller
 Route::get('/exemplo', function () {
